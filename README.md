@@ -3,18 +3,25 @@ Designing an arc flash Arcing Current, Incident Energy, and Protection Boundary 
 
 HOW TO RUN THE CODE: 
 
-1) Make sure the Excel files (attached in the repository) are in the same folder as the .m file.
+1) Apply the following Code 
 
-2) Apply the following Code
+2) Enter the following data: Voltage in kV, 
+                             bolt faulted current in kA, 
+                             electrode gap in mm, 
+                             working distance in mm, 
+                             arc duration in ms.   
 
 
 %% Defining Initial Values
+
 V=  input('Enter voltage in kV ');
 Ibf=  input('Enter bolt faulted current in kA ');
 G=  input('Enter electrode gap in mm  ');
 Wd=  input('Enter working distance in mm ');
 arcT=input('Enter arc duration in ms ');
+
 % Determining Arcing current
+
 Iarc_600=10^(0.043785+(1.04*log10(Ibf))+(-0.18*log10(G)))*((0*(Ibf^6))+(0*(Ibf^5))+(-4.786*10^-9*(Ibf^4))+(1.962*10^-6*(Ibf^3))+(-0.000229*(Ibf^2))+(0.003141*Ibf)+1.092);
 Iarc_2700=10^(-0.02395+(1.006*log10(Ibf))+(-0.0188*log10(G)))*((-1.557*10^-12*(Ibf^6))+(4.556*10^-10*(Ibf^5))+(-4.186*10^-8*(Ibf^4))+(8.346*10^-7*(Ibf^3))+(5.482*10^-5*(Ibf^2))+(-0.003191*Ibf)+0.9729);
 Iarc_14300=10^(0.005371+(1.0102*log10(Ibf))+(-0.029*log10(G)))*((-1.557*10^-12*(Ibf^6))+(4.556*10^-10*(Ibf^5))+(-4.186*10^-8*(Ibf^4))+(8.346*10^-7*(Ibf^3))+(5.482*10^-5*(Ibf^2))+(-0.003191*(Ibf))+0.9729);
@@ -71,6 +78,7 @@ for i=1:3
 end
 
 %% Calculating Incident Energy
+
 for i=1:3
     if(i==1)
         ki1=0.679294;
