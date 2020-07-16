@@ -1,7 +1,13 @@
 # Arc-Flash-Calculator
 Designing an arc flash Arcing Current, Incident Energy, and Protection Boundary calculator.
-HOW TO RUN THE CODE: 1) Make sure the Excel files (attached in the repository) are in the same folder as the .m file.
+
+HOW TO RUN THE CODE: 
+
+1) Make sure the Excel files (attached in the repository) are in the same folder as the .m file.
+
 2) Apply the following Code
+
+
 %% Defining Initial Values
 V=  input('Enter voltage in kV ');
 Ibf=  input('Enter bolt faulted current in kA ');
