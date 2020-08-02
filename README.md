@@ -1,5 +1,5 @@
 # Arc-Flash-Calculator
-Designing an arc flash Arcing Current, Incident Energy, and Protection Boundary calculator.
+Designing an arc flash Arcing Current, Incident Energy, and Protection Boundary calculator. This Project was created to as a part of coursework for UTA EE 5308 under Dr Wei-Jen Lee.
 
 HOW TO RUN THE CODE: 
 
